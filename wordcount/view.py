@@ -16,3 +16,7 @@ def count(request):
             word_dict[word] += 1
     sorted_dict = sorted(word_dict.items(), key=lambda w:w[1], reverse=True)
     return render(request, 'count.html', {'count': total_count, 'text': total_text, 'dict': sorted_dict})
+
+
+def about(request):
+    return render(request, 'about.html')
